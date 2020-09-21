@@ -1,0 +1,23 @@
+{
+  "name": "reactUI",
+  "version": "1.0.0",
+  "description": "typesctipt + react 创建自己的组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whalealice/reactUI.git"
+  },
+  "keywords": [],
+  "author": "baifan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whalealice/reactUI/issues"
+  },
+  "homepage": "https://github.com/whalealice/reactUI#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2"
+  }
+}
