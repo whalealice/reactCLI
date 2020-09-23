@@ -1,15 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './a.css'
-import styles from './b.less'
+import { Route, BrowserRouter,Switch, Link } from "react-router-dom"
+
+import {Home} from  './component/Home'
+import {Main} from  './component/Main'
 
 const App = () => {
 	return (
-		<div>
-			<div className="a">aaaa333</div>
-			<div className="b">bbbb</div>
-			<div className={styles.c}>vvvv</div>
-		</div>
+		<BrowserRouter>
+			<ul>
+				<li><Link to="/home">home</Link></li>
+				<li><Link to="/main">main</Link></li>
+			</ul>
+			<Switch>
+				<Route path="/home" component={Home} />
+				<Route path="/main" component={Main} />
+			</Switch>
+		</BrowserRouter>
 	)
 }
 ReactDOM.render(<App />, document.getElementById('app'));

@@ -19,3 +19,10 @@ npm i -D @babel/plugin-transform-runtime @babel/runtime @babel/runtime-corejs2
 
 npm i -D babel-loader
 npm i -D style-loader css-loader url-loader file-loader less less-loader
+
+
+<link rel="stylesheet" href="/static/css/reset.min.css">
+重新运行，你会发现找不到/static/css/reset.min.css。因为这里只是在index.html中引入了文件，但是并没有在webpack中处理静态文件，我们需要把static目录的内容通过webpack插架
+编译构建到包里；此处需要用到copy-webpack-plugin
+
+npm install -D copy-webpack-plugin
