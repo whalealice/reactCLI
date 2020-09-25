@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Route, BrowserRouter,Switch, Link } from "react-router-dom"
+import LoadableComponent from './util/loadable'
 
-import {Home} from  './component/Home'
-import {Main} from  './component/Main'
+
+const HomePage = LoadableComponent(() => import("./component/Home/component/index"))
+const MainPage = LoadableComponent(() => import("./component/Main/component/index"))
+
 
 const App = () => {
 	return (
@@ -13,8 +16,8 @@ const App = () => {
 				<li><Link to="/main">main</Link></li>
 			</ul>
 			<Switch>
-				<Route path="/home" component={Home} />
-				<Route path="/main" component={Main} />
+				<Route path="/home" component={HomePage} />
+				<Route path="/main" component={MainPage} />
 			</Switch>
 		</BrowserRouter>
 	)
